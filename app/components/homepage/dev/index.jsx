@@ -1,16 +1,16 @@
 // @flow strict
-
-import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
+
+import { dev } from "@/utils/data/dev";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import experience from "/public/lottie/code.json";
+import lottieFile from "/public/lottie/study.json";
 
-function Experience() {
+function Dev() {
   return (
     <div
-      id="experience"
+      id="dev"
       className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]"
     >
       <Image
@@ -20,33 +20,41 @@ function Experience() {
         height={795}
         className="absolute top-0 -z-10"
       />
+      <div className="flex justify-center -translate-y-[1px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
+        </div>
+      </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
+      {/* <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Services We are Offering
+            Quality Team Members
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-[#1a1443]">
+          </span>
+          
         </div>
-      </div>
+      </div> */}
+      
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
-            <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
+            <div className="w-3/4 h-3/4">
+              <AnimationLottie animationPath={lottieFile} />
             </div>
           </div>
 
           <div>
             <div className="flex flex-col gap-6">
-              {experiences.map((experience) => (
+              {dev.map((dev) => (
                 <GlowCard
-                  key={experience.id}
-                  identifier={`experience-${experience.id}`}
+                  key={dev.id}
+                  identifier={`education-${dev.id}`}
                 >
-                  <div className="p-3 relative">
+                  <div className="p-3 relative text-white">
                     <Image
                       src="/blur-23.svg"
                       alt="Hero"
@@ -56,7 +64,7 @@ function Experience() {
                     />
                     <div className="flex justify-center">
                       <p className="text-xs sm:text-sm text-[#16f2b3]">
-                        {experience.duration}
+                        {dev.duration}
                       </p>
                     </div>
                     <div className="flex items-center gap-x-8 px-3 py-5">
@@ -65,10 +73,10 @@ function Experience() {
                       </div>
                       <div>
                         <p className="text-base sm:text-xl mb-2 font-medium uppercase">
-                          {experience.title}
+                          {dev.title}
                         </p>
                         <p className="text-sm sm:text-base">
-                          {experience.company}
+                          {dev.institution}
                         </p>
                       </div>
                     </div>
@@ -83,4 +91,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Dev;
