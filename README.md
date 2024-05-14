@@ -15,9 +15,7 @@
 
 # Demo :movie_camera:
 
-![](./public/image/screen.png)
-
-## View live preview [here](https://abusaid.netlify.app/).
+![image](https://github.com/AtalibAgAlmousleck/developer-portfolio/assets/87047616/49e10506-5acd-45c8-9315-cccade0c0a96)
 
 ---
 
@@ -35,13 +33,14 @@
 # Sections :bookmark:
 
 - HERO SECTION
-- ABOUT ME
+- ABOUT US
 - EXPERIENCE
 - SKILLS
 - PROJECTS
-- EDUCATION
-- BLOG
-- CONTACTS
+- CONTACT US
+- Team section todo: coming soon
+- Testimonial section todo: coming soon
+- Blog section todo: coming soon
 
 ---
 
